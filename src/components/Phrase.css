@@ -1,0 +1,48 @@
+/* Estilo del contenedor para la frase */
+.phrase-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  text-align: center;
+  background-color: #83225e; /* Color de fondo morado */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Estilo del texto de la frase */
+.phrase-text {
+  font-size: 1.5rem;
+  font-family: 'Montserrat', cursive;
+  font-weight: normal;
+  color: #ffffff;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  /* Ajustar el tamaño y el padding del contenedor */
+  .phrase-container {
+    padding: 15px;
+  }
+
+  /* Ajuste de tamaño de la frase */
+  .phrase-text {
+    font-size: 1.3rem; /* Reducir tamaño de la frase en pantallas más pequeñas */
+  }
+}
+
+/* Media Query para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  /* Ajustar el tamaño y padding del contenedor */
+  .phrase-container {
+    padding: 10px;
+  }
+
+  /* Ajuste de tamaño de la frase */
+  .phrase-text {
+    font-size: 1.1rem; /* Reducir aún más el tamaño de la frase */
+  }
+}

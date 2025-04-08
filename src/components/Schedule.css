@@ -1,0 +1,151 @@
+/* Contenedor de la línea de tiempo */
+.schedule-container {
+  position: relative;
+  padding: 20px;
+  background-color: #f7f7f7;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto; /* Centrar el contenedor */
+}
+
+/* Barra de progreso que se va llenando a medida que se hace scroll */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background-color: #6a1b9a; /* Color de la barra de progreso */
+  transition: width 0.1s ease-out;
+  z-index: 999;
+}
+
+/* Línea de tiempo vertical */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centrado de los eventos */
+  position: relative;
+  padding-left: 50px;
+  margin-top: 50px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Estilo de cada evento */
+.event {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* Centrado de cada evento */
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1s forwards; /* Animación para aparecer */
+  width: 100%;  /* Hacer que el evento ocupe el 100% de la línea */
+}
+
+/* Animación para la entrada de los eventos */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Estilo del círculo para cada evento */
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: #6a1b9a;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* Estilo de los detalles del evento */
+.event-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrado del contenido en cada evento */
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  position: relative;
+  text-align: center; /* Centrado de los textos */
+}
+
+/* Estilo para el texto dentro de los detalles del evento */
+.event-details p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Estilo específico para la hora */
+.event-details .event-time {
+  color: #9c27b0;  /* Cambiar el color de la hora */
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* Imágenes (íconos) dentro de los detalles del evento */
+.event-details img {
+  width: 60px;  /* Aumenta el tamaño de las imágenes */
+  height: 60px; /* Aumenta el tamaño de las imágenes */
+  margin-top: 10px;
+  object-fit: contain;
+}
+
+/* Estilo de la línea vertical */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  height: 100%;
+  width: 2px;
+  background-color: #6a1b9a; /* Línea color morado */
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  /* Contenedor de la línea de tiempo */
+  .schedule-container {
+    padding: 15px;
+  }
+
+  /* Estilo de los eventos */
+  .event {
+    flex-direction: column;
+  }
+
+  /* Estilo de los detalles del evento */
+  .event-details {
+    width: 90%; /* Reducir el ancho en pantallas pequeñas */
+    padding: 10px;
+  }
+
+  /* Ajuste de la barra de progreso */
+  .progress-bar {
+    height: 4px;
+  }
+}
+
+/* Media Query para pantallas móviles muy pequeñas */
+@media (max-width: 480px) {
+  .event-details {
+    width: 95%; /* Asegurar que los detalles ocupen más espacio */
+    padding: 8px;
+  }
+
+  .event-details p {
+    font-size: 1rem; /* Reducir tamaño del texto */
+  }
+
+  .event-details .event-time {
+    font-size: 1.2rem; /* Reducir tamaño de la hora */
+  }
+
+  .progress-bar {
+    height: 3px; /* Reducir la altura de la barra en dispositivos muy pequeños */
+  }
+}

@@ -1,0 +1,56 @@
+/* Contenedor principal para la imagen */
+.image-component-container {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 92vh;
+  overflow: hidden;
+  transition: opacity 1s ease-in-out; /* Transición suave para desvanecerse */
+}
+
+/* Imagen de la niña (inicialmente en su tamaño completo) */
+.image-header {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed; /* La imagen siempre está fija en la pantalla */
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 12px;
+  transition: transform 0.5s ease-in-out, opacity 1s ease-in-out; /* Animaciones suaves */
+}
+
+/* Cuando la imagen se reduce y se coloca en la parte superior izquierda */
+.image-header.shrink {
+  transform: scale(0.2); /* Hace la imagen más pequeña */
+  top: -300px; /* Desplaza la imagen hacia arriba */
+  left: -250px; /* Desplaza la imagen hacia la izquierda */
+  opacity: 1; /* Mantén la imagen visible al hacer scroll */
+}
+
+/* Cuando la imagen desaparece */
+.image-header.hidden {
+  nav-index: auto;
+  opacity: 0; /* Hace que la imagen desaparezca */
+  pointer-events: none; /* Impide la interacción con la imagen */
+}
+
+/* Sin desvanecimiento (sin degradado) */
+.image-component-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 2;
+  pointer-events: none;
+}

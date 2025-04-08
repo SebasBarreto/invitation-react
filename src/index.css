@@ -1,0 +1,78 @@
+/* Importar las fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;700&display=swap');
+
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* Asegura que padding y border no afecten el tamaño total */
+}
+
+/* Fondo general y centrado de todos los elementos */
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: grid;
+  justify-content: center;  /* Centra el contenido horizontalmente */
+  align-items: center;      /* Centra el contenido verticalmente */
+  height: 100vh;            /* Asegura que ocupe todo el alto de la ventana */
+  background-color: #f0f0f0;
+  overflow: auto;           /* Permite el scroll si es necesario */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Estilo general para los componentes */
+.box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  max-width: 1200px; /* Añadido para evitar que el contenedor se expanda demasiado */
+  margin: 0 auto;
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .box-container {
+    padding: 15px; /* Reducir padding en pantallas más pequeñas */
+  }
+
+  #header h1 {
+    font-size: 2rem; /* Reducir tamaño de fuente */
+    margin-bottom: 30px; /* Ajustar el margen */
+  }
+
+  #header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .event-date {
+    font-size: 1.2rem;
+  }
+}
+
+/* Ajuste para pantallas móviles más pequeñas */
+@media (max-width: 480px) {
+  #header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  #header h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .event-date {
+    font-size: 1rem;
+  }
+
+  .box-container {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,81 @@
+/* Footer.css */
+
+/* Estilo principal para el pie de página */
+.footer {
+  background-color: #f9f9f9;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Estilo para el hashtag */
+.hashtag {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #9c27b0;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Hacer el hashtag en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+/* Estilo para el mensaje de agradecimiento */
+.thanks-message {
+  font-size: 1.2rem;
+  color: #421379;
+  margin-bottom: 30px;
+  line-height: 1.5; /* Mejor interlineado para mayor legibilidad */
+}
+
+/* Estilo para la imagen en el footer */
+.footer-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+}
+
+/* Media Query para pantallas más pequeñas (tabletas) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px;
+  }
+
+  .hashtag {
+    font-size: 1.2rem;
+  }
+
+  .thanks-message {
+    font-size: 1rem;
+  }
+
+  .footer-image {
+    max-width: 300px;
+  }
+}
+
+/* Media Query para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px;
+  }
+
+  .hashtag {
+    font-size: 1.1rem;
+  }
+
+  .thanks-message {
+    font-size: 0.9rem;
+  }
+
+  .footer-image {
+    max-width: 250px;
+  }
+}

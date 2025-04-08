@@ -1,0 +1,129 @@
+/* Estilo principal para el contenedor del código de vestimenta */
+.dress-code-container {
+  background-color: #f4f4f9; /* Fondo claro para el contenedor */
+  color: #333;  /* Color de texto oscuro */
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  width: 80%;
+  max-width: 800px;
+  margin: 40px auto; /* Centrado del contenedor */
+}
+
+/* Título principal */
+.title {
+  font-size: 2.5rem;
+  font-family: 'Great Vibes', cursive;
+  margin-bottom: 20px;
+  color: #6a1b9a; /* Morado para el título */
+  text-transform: uppercase; /* Título en mayúsculas para mayor énfasis */
+  letter-spacing: 2px; /* Espaciado entre letras */
+}
+
+/* Subtítulo (Formal) */
+.sub-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #9c27b0; /* Morado oscuro */
+}
+
+/* Contenedor de la imagen */
+.image-container {
+  margin-bottom: 30px;
+}
+
+/* Estilo de la imagen (íconos de vestido y traje) */
+.dress-code-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto; /* Centrado de la imagen */
+}
+
+/* Título de la sección de regalos */
+.gifts-title {
+  font-size: 1.8rem;
+  font-family: 'Great Vibes', cursive;
+  margin-bottom: 15px;
+  color: #9c27b0; /* Morado para la sección de regalos */
+  text-transform: uppercase; /* Título en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+/* Descripción de los regalos */
+.gifts-description {
+  font-size: 1.1rem;
+  color: #555;  /* Color suave para el texto */
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  /* Ajustar el tamaño y el padding del contenedor */
+  .dress-code-container {
+      padding: 20px;
+  }
+
+  /* Ajuste del tamaño del título */
+  .title {
+      font-size: 2rem; /* Reducir tamaño del título */
+  }
+
+  /* Ajuste del tamaño del subtítulo */
+  .sub-title {
+      font-size: 1.6rem;
+  }
+
+  /* Ajustar el tamaño de la imagen */
+  .dress-code-image {
+      width: 80px;
+      height: 80px;
+  }
+
+  /* Ajuste del título de la sección de regalos */
+  .gifts-title {
+      font-size: 1.6rem;
+  }
+
+  /* Ajuste del tamaño de la descripción de los regalos */
+  .gifts-description {
+      font-size: 1rem;
+  }
+}
+
+/* Media Query para pantallas móviles muy pequeñas */
+@media (max-width: 480px) {
+  /* Ajuste del tamaño y padding del contenedor */
+  .dress-code-container {
+      padding: 15px;
+  }
+
+  /* Ajuste del tamaño del título */
+  .title {
+      font-size: 1.5rem; /* Reducir aún más el tamaño del título */
+  }
+
+  /* Ajuste del tamaño del subtítulo */
+  .sub-title {
+      font-size: 1.3rem;
+  }
+
+  /* Ajuste del tamaño de la imagen */
+  .dress-code-image {
+      width: 60px;
+      height: 60px;
+  }
+
+  /* Ajuste del título de la sección de regalos */
+  .gifts-title {
+      font-size: 1.4rem;
+  }
+
+  /* Ajuste del tamaño de la descripción de los regalos */
+  .gifts-description {
+      font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,125 @@
+/* Estilo principal para el contenedor del código de vestimenta */
+.dress-code-container {
+  background-color: #f4f4f9; /* Fondo claro para el contenedor */
+  color: #333;  /* Color de texto oscuro */
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  width: 80%;
+  max-width: 900px; /* Max-width para mantener un buen tamaño */
+  margin: 40px auto; /* Centrado del contenedor */
+}
+
+/* Título principal */
+.title {
+  font-size: 2.5rem;
+  font-family: 'Great Vibes', cursive;
+  margin-bottom: 20px;
+  color: #6a1b9a; /* Morado para el título */
+  text-transform: uppercase; /* Hacer el título en mayúsculas */
+  letter-spacing: 1px;
+}
+
+/* Subtítulo (Formal) */
+.sub-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #9c27b0; /* Morado oscuro */
+}
+
+/* Contenedor de la imagen */
+.image-container {
+  margin-bottom: 30px;
+}
+
+/* Estilo de la imagen (íconos de vestido y traje) */
+.dress-code-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto; /* Centrado de la imagen */
+}
+
+/* Título de la sección de regalos */
+.gifts-title {
+  font-size: 1.8rem;
+  font-family: 'Great Vibes', cursive;
+  margin-bottom: 15px;
+  color: #9c27b0; /* Morado para la sección de regalos */
+  text-transform: uppercase; /* Hacerlo en mayúsculas */
+  letter-spacing: 1px;
+}
+
+/* Descripción de los regalos */
+.gifts-description {
+  font-size: 1.1rem;
+  color: #555;  /* Color suave para el texto */
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .dress-code-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .sub-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .gifts-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .gifts-description {
+    font-size: 1rem;
+  }
+
+  .dress-code-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Media Query para pantallas más pequeñas (móviles) */
+@media (max-width: 480px) {
+  .dress-code-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .sub-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .gifts-title {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+  }
+
+  .gifts-description {
+    font-size: 0.9rem;
+  }
+
+  .dress-code-image {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,97 @@
+/* Contenedor principal del componente */
+.fathers-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto; /* Más espacio entre los contenedores */
+  padding: 40px;     /* Más relleno dentro del contenedor */
+  border: 2px solid #D5A79D;
+  border-radius: 15px; /* Bordes más redondeados */
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Títulos de la sección */
+.heading {
+  font-size: 2rem; /* Tamaño de fuente más grande */
+  font-family: 'Dancing Script', cursive;
+  font-weight: normal;
+  margin-bottom: 40px; /* Más espacio abajo */
+  color: #6a1b9a; /* Color morado elegante */
+}
+
+/* Títulos secundarios */
+h3 {
+  font-size: 1.5rem; /* Tamaño de fuente más grande */
+  font-family: 'Dancing Script', cursive;
+  font-weight: normal;
+  margin-bottom: 20px; /* Más espacio debajo de los títulos */
+  color: #9c27b0; /* Morado para los subtítulos */
+}
+
+/* Estilo para los párrafos */
+p {
+  font-size: 1.2rem;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 10px 0; /* Más espacio entre los párrafos */
+  line-height: 1.6; /* Mejor interlineado */
+}
+
+/* Estilo para el texto final de invitación */
+.invitation-text {
+  font-size: 1.5rem; /* Aumentar tamaño de fuente */
+  font-family: 'Dancing Script', cursive;
+  margin-top: 30px;  /* Más espacio arriba */
+  color: #9c27b0;
+  font-weight: 600; /* Hacerlo en negritas */
+  text-transform: uppercase; /* Hacerlo en mayúsculas */
+  letter-spacing: 2px; /* Espaciado entre las letras */
+}
+
+/* Media Query para pantallas más pequeñas (tabletas) */
+@media (max-width: 768px) {
+  .fathers-container {
+    padding: 30px; /* Reducir padding para pantallas más pequeñas */
+  }
+
+  .heading {
+    font-size: 1.8rem; /* Reducir tamaño del título */
+  }
+
+  h3 {
+    font-size: 1.3rem; /* Reducir tamaño de los subtítulos */
+  }
+
+  p {
+    font-size: 1rem; /* Reducir tamaño de los párrafos */
+  }
+
+  .invitation-text {
+    font-size: 1.3rem; /* Reducir tamaño de la invitación */
+  }
+}
+
+/* Media Query para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .fathers-container {
+    width: 95%; /* Reducir el ancho para pantallas pequeñas */
+    padding: 20px; /* Reducir padding */
+  }
+
+  .heading {
+    font-size: 1.5rem; /* Reducir aún más el tamaño del título */
+  }
+
+  h3 {
+    font-size: 1.1rem; /* Reducir tamaño de los subtítulos */
+  }
+
+  p {
+    font-size: 0.9rem; /* Reducir tamaño de los párrafos */
+  }
+
+  .invitation-text {
+    font-size: 1.2rem; /* Reducir tamaño de la invitación */
+  }
+}

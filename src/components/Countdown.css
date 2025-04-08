@@ -1,0 +1,141 @@
+/* Estilo para el contenedor de la cuenta regresiva */
+.countdown {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* Blanco para el texto */
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px; /* Bordes más suaves */
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Agrega sombra sutil */
+  background-color: rgba(0, 0, 0, 0.6); /* Agrega un fondo oscuro para contraste */
+}
+
+/* Estilo para el contenido dentro de la cuenta regresiva */
+.countdown-content {
+  background: rgba(0, 0, 0, 0.7); /* Fondo más oscuro para mejor contraste */
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Título de la cuenta regresiva */
+.countdown-title {
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #f1c40f; /* Amarillo dorado para un toque elegante */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Sombra suave en el texto */
+}
+
+/* Contenedor para los elementos de tiempo */
+.countdown-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Estilo para cada bloque de tiempo (días, horas, minutos, segundos) */
+.countdown-time-item {
+  margin: 0 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo translúcido */
+  border-radius: 12px;
+  width: 80px; /* Controla el ancho de cada caja de tiempo */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.countdown-time-item span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50; /* Color gris oscuro para los números */
+  display: block;
+  margin-bottom: 10px;
+}
+
+.countdown-time-item p {
+  font-size: 1rem;
+  color: #f39c12; /* Color amarillo dorado para las etiquetas */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Estilo para el texto final de invitación */
+.countdown-footer {
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 30px;
+  color: #f1c40f; /* Color dorado */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Query para pantallas más pequeñas (tabletas) */
+@media (max-width: 768px) {
+  .countdown-content {
+    padding: 30px 40px;
+  }
+
+  .countdown-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .countdown-time-item {
+    padding: 15px;
+    width: 70px;
+  }
+
+  .countdown-time-item span {
+    font-size: 2.5rem;
+  }
+
+  .countdown-time-item p {
+    font-size: 0.9rem;
+  }
+
+  .countdown-footer {
+    font-size: 1.6rem;
+  }
+}
+
+/* Media Query para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .countdown-content {
+    padding: 20px 30px;
+  }
+
+  .countdown-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .countdown-time-item {
+    padding: 12px;
+    width: 60px;
+  }
+
+  .countdown-time-item span {
+    font-size: 2rem;
+  }
+
+  .countdown-time-item p {
+    font-size: 0.8rem;
+  }
+
+  .countdown-footer {
+    font-size: 1.4rem;
+  }
+}

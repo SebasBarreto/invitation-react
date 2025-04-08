@@ -1,0 +1,165 @@
+/* Estilo para el contenedor principal */
+.unique-event-details {
+  background-color: #fff; /* Fondo blanco para mantener la limpieza */
+  padding: 50px; /* Aumentar el padding para más espacio alrededor */
+  border-radius: 20px; /* Bordes más suaves */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Sombra más suave y difusa */
+  max-width: 750px; /* Ancho máximo mayor */
+  width: 100%;
+  margin: 50px auto; /* Centrado con mayor espacio arriba y abajo */
+  text-align: center;
+  color: #2c3e50;  /* Color de texto oscuro para mejor legibilidad */
+  font-family: 'Montserrat', sans-serif;  /* Fuente sans-serif más moderna */
+}
+
+/* Estilo para la imagen */
+.unique-event-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* Bordes suaves en la imagen */
+  margin-bottom: 30px; /* Espacio más grande debajo de la imagen */
+  object-fit: cover; /* Asegura que la imagen no se distorsione */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra sutil alrededor de la imagen */
+}
+
+/* Estilo para el título */
+.unique-event-details h3 {
+  font-size: 2.4rem; /* Tamaño de fuente mayor */
+  font-weight: 700; /* Fuente en negrita para mayor énfasis */
+  margin-bottom: 20px;
+  color: #9c27b0;  /* Color morado elegante */
+  text-transform: uppercase;  /* Título en mayúsculas para mayor énfasis */
+  letter-spacing: 2px; /* Espaciado entre letras para un toque sofisticado */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidad */
+}
+
+/* Estilo para los párrafos */
+.unique-event-details p {
+  font-size: 1.1rem;
+  margin: 15px 0; /* Espaciado más grande entre los párrafos */
+  color: #555; /* Color más suave para el texto */
+  line-height: 1.7; /* Mejor interlineado para mayor legibilidad */
+  font-weight: 400; /* Peso normal para los párrafos */
+}
+
+/* Estilo para los botones */
+.unique-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Espaciado amplio entre los botones */
+  margin-top: 30px;
+}
+
+/* Estilo común para los botones */
+.unique-event-details button {
+  background-color: #9c27b0; /* Color de fondo morado elegante */
+  color: white;
+  padding: 12px 30px; /* Espaciado mayor para botones más grandes */
+  font-size: 1.1rem; /* Aumentar el tamaño de la fuente */
+  cursor: pointer;
+  border-radius: 50px; /* Bordes completamente redondeados */
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  width: 100%;
+  max-width: 180px; /* Tamaño máximo de los botones */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para los botones */
+  display: flex;
+  align-items: center; /* Centrar los íconos y texto */
+  justify-content: center;
+  gap: 15px; /* Espacio entre el ícono y el texto */
+  font-family: 'Montserrat', sans-serif;  /* Fuente consistente */
+  letter-spacing: 1px;
+}
+
+/* Efecto hover para los botones */
+.unique-event-details button:hover {
+  background-color: #7b1fa2; /* Color más oscuro al pasar el ratón */
+  transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+}
+
+/* Efecto focus para accesibilidad */
+.unique-event-details button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(156, 39, 176, 0.4);  /* Sombra cuando el botón está en foco */
+}
+
+/* Estilo para los íconos de los botones */
+.unique-map-icon {
+  width: 50px;  /* Ajustar tamaño de los íconos */
+  height: 50px;  /* Ajustar tamaño de los íconos */
+  background-color: transparent; /* Sin fondo */
+  border-radius: 50%; /* Bordes redondeados */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Animación suave para hover */
+  flex-shrink: 0; /* Evita que el ícono se deforme */
+  object-fit: contain;
+}
+
+/* Efecto hover para los íconos */
+.unique-map-icon:hover {
+  transform: scale(1.2); /* Aumentar el tamaño del ícono */
+  filter: brightness(1.3); /* Aumentar el brillo del ícono */
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  /* Ajustamos el tamaño y padding del contenedor */
+  .unique-event-details {
+    padding: 30px;
+  }
+
+  .unique-event-details h3 {
+    font-size: 2rem; /* Reducir el tamaño del título */
+    margin-bottom: 15px;
+  }
+
+  .unique-event-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .unique-event-image {
+    margin-bottom: 20px; /* Menos espacio debajo de la imagen */
+  }
+
+  .unique-buttons-container {
+    gap: 20px; /* Espacio menor entre los botones */
+  }
+
+  .unique-event-details button {
+    max-width: 160px; /* Reducir tamaño máximo de los botones */
+  }
+}
+
+/* Media Query para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  /* Ajustamos el tamaño y padding del contenedor */
+  .unique-event-details {
+    padding: 20px;
+  }
+
+  .unique-event-details h3 {
+    font-size: 1.6rem; /* Reducir aún más el tamaño del título */
+    margin-bottom: 10px;
+  }
+
+  .unique-event-details p {
+    font-size: 0.9rem;
+  }
+
+  .unique-event-image {
+    margin-bottom: 15px;
+  }
+
+  .unique-buttons-container {
+    gap: 15px;
+  }
+
+  .unique-event-details button {
+    max-width: 140px; /* Reducir aún más el tamaño máximo de los botones */
+  }
+
+  .unique-map-icon {
+    width: 40px; /* Reducir tamaño de los íconos */
+    height: 40px;
+  }
+}

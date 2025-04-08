@@ -1,0 +1,140 @@
+/* Contenedor principal */
+.unique-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 92vh;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  transition: opacity 3s ease-in-out;
+  padding: 0 10px;
+  opacity: 0;
+}
+
+.unique-header.fade-in {
+  opacity: 1;
+}
+
+/* Imagen superior con efecto desvanecido */
+.header-image1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  z-index: 1;
+  mask-image: linear-gradient(to bottom, 
+    rgba(0,0,0,1) 85%, 
+    rgba(0,0,0,0) 100%);
+}
+
+/* Imagen inferior con superposición del 10% */
+.header-image {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.9);
+}
+
+/* Textos */
+.unique-header h1 {
+  font-size: 4rem;
+  margin-bottom: 120px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  transform: translateY(20%);
+}
+
+.unique-header h2 {
+  font-size: 8rem;
+  margin-bottom: 90px;
+  font-weight: lighter;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  line-height: 1.1;
+}
+
+.event-date {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  transform: translateY(50%);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .unique-header {
+    height: 80vh;
+  }
+
+  .unique-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 80px;
+    transform: translateY(10%);
+  }
+
+  .unique-header h2 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+  }
+
+  .event-date {
+    font-size: 1.4rem;
+    transform: translateY(30%);
+  }
+
+  .header-image1 {
+    height: 85%;
+    mask-image: linear-gradient(to bottom, 
+      rgba(0,0,0,1) 80%, 
+      rgba(0,0,0,0) 100%);
+  }
+
+  .header-image {
+    top: 15%;
+    height: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  .unique-header {
+    height: 70vh;
+  }
+
+  .unique-header h1 {
+    font-size: 2rem;
+    margin-bottom: 60px;
+  }
+
+  .unique-header h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .event-date {
+    font-size: 1.2rem;
+  }
+
+  .header-image1 {
+    height: 80%;
+    mask-image: linear-gradient(to bottom, 
+      rgba(0,0,0,1) 75%, 
+      rgba(0,0,0,0) 100%);
+  }
+
+
+}
