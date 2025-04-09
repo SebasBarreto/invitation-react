@@ -3,6 +3,7 @@ import './Header.css';
 import useIntersectionObserver from './useIntersectionObserver';
 import styled from 'styled-components';
 
+// Estilos con styled-components
 export const HeaderWrapper = styled.div`
   width: 100vw;
   height: 100vh;
@@ -13,38 +14,59 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const HeaderCard = styled.div`
-  width: 60%;
+  width: 100%;
   height: 100%;
   background-color: #ffffff;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: none;  /* Eliminar sombra o borde */
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 `;
 
-export const HeaderSection = styled.div`
+export const HeaderContent = styled.div`
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Asegura que el texto quede en la parte inferior */
+  align-items: center;
+  position: absolute;
+  bottom: 20px; /* Coloca el texto en la parte inferior de la imagen */
+  z-index: 2; /* Asegura que el contenido esté por encima de la imagen */
   width: 100%;
-  height: 30%;
-  background-color: #d5a6bd;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Mejor contraste */
+  font-size: 3.5rem; /* Tamaño de la fuente */
+  text-align: center;
+`;
+
+const HeaderImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Imagen detrás del texto */
 `;
-
 
 function Header() {
   const isVisible = useIntersectionObserver({
-    target: '.unique-header',  // Usamos la nueva clase única
+    target: '.unique-header',
   });
 
   return (
-    <div className={`unique-header ${isVisible ? 'fade-in' : ''}`}>
-      <img src="/assets/isa-header.png" alt="isa-foto" className="header-image1" />
-      <h1>Mis Quince Años ♛ </h1>
-      <h2> Sharon sabella 
-        Tellez Peña 
-      </h2>
-      <p className="event-date">26 de Abril 2025</p>
-    </div>
+    <HeaderWrapper>
+      <HeaderCard>
+        <HeaderImageWrapper>
+          <img src="/assets/isa-header.png" alt="isa-foto" className="header-image1" />
+        </HeaderImageWrapper>
+
+        <HeaderContent>
+          <p>Mis Quince Años ♛ <br/> Sharon Sabella Tellez Peña <br/> 26 de Abril 2025</p>
+        </HeaderContent>
+      </HeaderCard>
+    </HeaderWrapper>
   );
 }
 

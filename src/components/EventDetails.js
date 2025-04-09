@@ -8,7 +8,6 @@ function EventDetails() {
       <h3>¿Dónde y Cuándo?</h3>
       <img src="/assets/gastrobar.png" alt="Imagen del evento" className="unique-event-image" />
       <p>Aldany Music Resto Bar</p>
-      <p>20:00 hrs</p>
       <p>calle 74c sur #12-17, Barrio Santa Librada!</p>
       
       {/* Botones para Waze y Google Maps */}
