@@ -39,8 +39,9 @@ export const FooterContent = styled.div`
 
 export const ImageWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
   margin-top: 20px;
 `;
 
@@ -51,12 +52,13 @@ function Footer() {
       <p className="thanks-message">Gracias por acompañarme en este día tan especial ❤️</p>
       <img className="footer-image" src="imagen4.jpg" alt="agradecimiento" />
       
-      <ImageWrapper>
+      <div className="ImageWrapper">
         <img className="footer-image" src="/assets/isa1.jpeg" alt="imagen 1" />
         <img className="footer-image" src="/assets/isa2.png" alt="imagen 2" />
-        <img className="footer-image" src="/assets/isa3.png" alt="imagen 3" />
         <img className="footer-image" src="/assets/isa4.jpeg" alt="imagen 4" />
-      </ImageWrapper>
+        <img className="footer-image" src="/assets/isa3.png" alt="imagen 3" />
+        
+      </div>
     </div>
   );
 }

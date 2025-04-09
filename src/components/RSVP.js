@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
+import './RSVP.css';  // Importa el archivo CSS para los estilos
 import styled from 'styled-components';
 
-// Estilos con styled-components
 export const RSVPWrapper = styled.div`
   width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f4;
+
 `;
 
 export const RSVPCard = styled.div`
@@ -36,14 +35,16 @@ export const RSVPContent = styled.div`
   align-items: center;
 `;
 
-const InputContainer = styled.div`
-`;
+const InputContainer = styled.div``;
 
 const InputField = styled.input`
-  padding: 10px;
+  padding: 12px;
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 300px;
 `;
 
 const Button = styled.button`
@@ -54,7 +55,13 @@ const Button = styled.button`
   border: none;
   cursor: pointer;
   margin-top: 20px;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  
+  &:hover {
+    background-color: #7b1fa2;
+    transform: translateY(-3px); /* Efecto de elevación */
+  }
 `;
 
 function RSVP() {

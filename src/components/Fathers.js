@@ -9,7 +9,7 @@ function Fathers() {
       <div className="parents">
         <h3>Mis Padres</h3>
         <p>Sr. Evencio Tellez</p>
-        <p>Sra. Rosalbina Peña</p>
+        <p>Sra. Rosa Peña</p>
       </div>
 
       <div className="godparents">

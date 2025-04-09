@@ -1,5 +1,3 @@
-/* Footer.css */
-
 /* Estilo principal para el pie de página */
 .footer {
   background-color: #f9f9f9;
@@ -31,15 +29,30 @@
   line-height: 1.5; /* Mejor interlineado para mayor legibilidad */
 }
 
-/* Estilo para la imagen en el footer */
+/* Estilo para las imágenes en el footer */
 .footer-image {
   width: 100%;
-  max-width: 400px;
+  max-width: 350px; /* Tamaño máximo para las imágenes */
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+  margin: 10px;
   object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+  transition: transform 0.3s ease; /* Agregar transición para el efecto hover */
+}
+
+/* Efecto hover para las imágenes */
+.footer-image:hover {
+  transform: scale(1.05); /* Un ligero aumento del tamaño al pasar el mouse */
+}
+
+/* Contenedor para las imágenes */
+.ImageWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las imágenes */
+  flex-wrap: wrap; /* Permite que las imágenes se ajusten a pantallas pequeñas */
+  margin-top: 20px;
 }
 
 /* Media Query para pantallas más pequeñas (tabletas) */
@@ -57,7 +70,7 @@
   }
 
   .footer-image {
-    max-width: 300px;
+    max-width: 250px; /* Reducir el tamaño en pantallas más pequeñas */
   }
 }
 
@@ -76,6 +89,6 @@
   }
 
   .footer-image {
-    max-width: 250px;
+    max-width: 200px; /* Aún más pequeño para móviles */
   }
 }
