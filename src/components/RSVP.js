@@ -7,7 +7,6 @@ export const RSVPWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
 `;
 
 export const RSVPCard = styled.div`
@@ -35,14 +34,15 @@ export const RSVPContent = styled.div`
   align-items: center;
 `;
 
-const InputContainer = styled.div``;
+const InputContainer = styled.div`
+  margin-top: 15px;
+`;
 
 const InputField = styled.input`
   padding: 12px;
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
-  margin-top: 15px;
   width: 100%;
   max-width: 300px;
 `;
@@ -66,12 +66,18 @@ const Button = styled.button`
 
 function RSVP() {
   const [attendees, setAttendees] = useState(0); // Número de asistentes
-  const [familyName, setFamilyName] = useState(""); // Nombre de la familia
-  const [showFamilyInput, setShowFamilyInput] = useState(false); // Si se muestra el campo para ingresar familia
+  const [familyName, setFamilyName] = useState(""); // Nombre de la persona
+  const [showFamilyInput, setShowFamilyInput] = useState(false); // Si se muestra el campo para ingresar nombre
   const [isConfirmed, setIsConfirmed] = useState(false); // Estado para manejar la confirmación
 
   const handleRSVP = (e) => {
-    setAttendees(Number(e.target.value));
+    const value = Number(e.target.value);
+    setAttendees(value);
+    if (value !== 6) {
+      setShowFamilyInput(true);  // Mostrar campo de nombre solo si se selecciona un número
+    } else {
+      setShowFamilyInput(false);  // Ocultar campo de nombre si se selecciona "No podré asistir"
+    }
   };
 
   const handleFamilyInputChange = (e) => {
@@ -82,12 +88,12 @@ function RSVP() {
     if (attendees === 6) {
       // Si el usuario selecciona "No podré asistir"
       const message = `¡Hola! Lamento informar que no podré asistir a la fiesta de XV años de Isabella Tellez Peña.`;
-      const phoneNumber = "+573214788756"; // Aquí pones tu número de WhatsApp
+      const phoneNumber = "+573042508845"; // Aquí pones tu número de WhatsApp
       window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
-    } else {
-      // Generar el mensaje para WhatsApp con los acompañantes
-      const message = `¡Hola! Soy parte de la familia ${familyName} y asistiré a la fiesta de XV años de Isabella Tellez Peña, con ${attendees} acompañantes.`;
-      const phoneNumber = "+573214788756"; // Aquí pones tu número de WhatsApp
+    } else if (attendees > 0 && familyName) {
+      // Si se selecciona un número y se ingresa el nombre
+      const message = `¡Hola! Soy ${familyName} y asistiré a la fiesta de XV años de Isabella Tellez Peña, con ${attendees} acompañantes.`;
+      const phoneNumber = "+573042508845"; // Aquí pones tu número de WhatsApp
       window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
     }
   };
@@ -112,10 +118,10 @@ function RSVP() {
 
           {attendees !== 6 && showFamilyInput && (
             <InputContainer>
-              <label>Ingresa tu familia:</label>
+              <label>Ingresa tu nombre:</label>
               <InputField 
                 type="text" 
-                placeholder="Familia ____________" 
+                placeholder="Nombre ____________" 
                 value={familyName} 
                 onChange={handleFamilyInputChange} 
               />
