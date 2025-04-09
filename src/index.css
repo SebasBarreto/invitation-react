@@ -8,6 +8,10 @@
   box-sizing: border-box;  /* Asegura que padding y border no afecten el tamaño total */
 }
 
+#root {
+  transform: translateX(auto);
+}
+
 /* Fondo general y centrado de todos los elementos */
 body {
   font-family: 'Montserrat', sans-serif;
@@ -15,15 +19,12 @@ body {
   justify-content: center;  /* Centra el contenido horizontalmente */
   align-items: center;      /* Centra el contenido verticalmente */
   height: 100vh;            /* Asegura que ocupe todo el alto de la ventana */
-  background-color: #f0f0f0;
   overflow: auto;           /* Permite el scroll si es necesario */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   font-family: 'Great Vibes', cursive;
 }
-
-/* Estilo general para los componentes */
 
 /* Ajuste para pantallas más pequeñas */
 @media (max-width: 768px) {

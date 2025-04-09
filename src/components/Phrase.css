@@ -6,8 +6,7 @@
   text-align: center;
   background-color: #83225e; /* Color de fondo morado */
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
 }
 
 /* Estilo del texto de la frase */

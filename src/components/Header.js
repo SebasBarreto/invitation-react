@@ -63,7 +63,7 @@ function Header() {
         </HeaderImageWrapper>
 
         <HeaderContent>
-          <p>Mis Quince Años ♛ <br/> Sharon Isabella Tellez Peña <br/> 26 de Abril 2025</p>
+          <h5>Mis Quince Años ♛ <br/> Sharon Isabella Tellez Peña <br/> 26 de Abril 2025</h5>
         </HeaderContent>
       </HeaderCard>
     </HeaderWrapper>
